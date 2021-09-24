@@ -9,13 +9,15 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://kit.fontawesome.com/8ac277422e.js" crossorigin="anonymous"></script
 </head>
 <body>
    
     <div class=hero>
         <nav class=navbar>
             <a href="index.html"><img src="pics/logocan.png" class=logo></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href=""></a>HOME</li>
                     <li><a href=""></a>ABOUT</li>
@@ -23,7 +25,9 @@
                     <li><a href=""></a>ASSIGNMENT</li>
                     <li><a href=""></a>CHAT</li>
                 </ul>
+                
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
             <!-- /<button type="button">Sign UP</button> -->
         </nav>
         <div class="content">
@@ -31,9 +35,17 @@
         <h1>Student's Best Companion</h1>
         <button type="button">Take a tour</button>
     </div>
-         <div class="sidebar"> 
-           
-         </div>
+        <!------------Java Script for toogle menu----------->
+         <script type="text/javascript">
+
+             function showMenu() {
+            document.getElementById("navLinks").style.width = "330px";
+                           }
+             function hideMenu() {
+             document.getElementById("navLinks").style.width = "0";
+                               }
+
+         </script>
 
 </body>
 </html> 
